@@ -6,9 +6,11 @@ const parengtiPervežimųStatistiką = () => {
     const sumos = [];
     let k;
     let kiekIvykdėUžsakymų;
-    while (suma != 0) {
+    while (sumos.at(-1) != 0) {
+        suma = prompt("Įveskite sumą: ");
         sumos.push(suma);
-        (kiekIvykdėUžsakymų = (arr) => {
+    }
+     (kiekIvykdėUžsakymų = (arr) => {
             k = 0;
             arr.forEach(element => {
                 if (+element > 100) {
@@ -23,9 +25,6 @@ const parengtiPervežimųStatistiką = () => {
 
             return k;
         })(sumos);
-
-        suma = prompt("Įveskite sumą: ");
-    }
 return `1. ${k} `;
 }
 
